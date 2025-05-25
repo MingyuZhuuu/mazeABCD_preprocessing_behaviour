@@ -210,12 +210,12 @@ And then copy the link, paste it into the "Select Kernel" entry (on the top righ
 
 - if you have certain sessions where you forgot the restart the video when restarting pycontrol or ephys, you might need to split the tracking / ROI data into two, this would be reflected in the fact that the number of sync pulses from the pinstate file would be the addition of the sync pulse counts from two sessions from ephys or pycontrol. The log for sync pulse mismatch errors would be stored at `data/preprocessed_data` folder. An example of such a mistake:
 
-  ```
+```bash
 mz07-2024-10-23-164942.txt pyControl: 22 pinstate: 261
 mz07-2024-10-23-165402.txt pyControl: 239 pinstate: 261
 ```
 
-- if you want to rescue the sessions, go to notebook `/code/preprocessing/manual_correction.ipynb` and work through splitting the .h5 sleap files and .csv roi files, change the corresponding tracking ID in metadata
+- if you want to rescue the sessions, go to notebook `/code/preprocessing/manual_correction.ipynb` and work through splitting the .h5 sleap files and .csv roi files, change the corresponding tracking ID in metadata. and then rerun the notebook with `SKIPPING = True`
 
 
 
