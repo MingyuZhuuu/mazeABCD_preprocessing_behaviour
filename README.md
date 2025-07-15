@@ -41,7 +41,7 @@ By going through this pipeline, you would have:
 1. `XY_raw_[mouseid]_[date]_[sess].npy`: Processed tracking coordinates
 2. `Location_raw_[mouseid]_[date]_[sess].npy`: Location data
 3. `trialtimes_[mouseid]_[date]_[sess].npy`: Trial timing information
-4. `poke_raw_[mouseid]_[date]_[sess].npy`: Nose poke events
+4. `poke_all_[mouseid]_[date]_[sess].npy`: Nose poke events
 5. **(OPTIONAL)** `LED_raw_[mouseid]_[date]_[sess].npy`: LED stimulation data
 
 ### detailed explanation 
@@ -81,9 +81,9 @@ The sessions will be numbered according to the sessions on the day. if a session
      - aligned to first A (i.e. [0,0] = 0) 
    
    
-4. `poke_raw_[mouseid]_[date]_[sess].npy`: Nose poke events
+4. `poke_all_[mouseid]_[date]_[sess].npy`: Nose poke events
 
-     - array of shape `[number of pokes, 3]` where the columns are `[poke_in_time, poke_out_time, port_num] `
+     - array of shape `[number of pokes, 3]` where the columns are `[poke_timestamp, port_num, 0/1 (pokein/pokeout] `
    
 
 **(OPTIONAL) -- only relevant if doing optogenetics**
